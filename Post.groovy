@@ -1,8 +1,11 @@
 class Post {
 
-	private postMessage(message) {
-		def date = new Date()
-			("${date} ${message}")
+	def message
+	def date
+
+	Post(message) {
+		this.message = message
+		this.date = new Date()
 	}
-	
+
 }

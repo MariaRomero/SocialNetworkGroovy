@@ -5,10 +5,10 @@ class UserTests extends GroovyTestCase {
 	private spike, nikesh, leo
 
 	def void setUp() {
-		spike = new User("Spike", new Post())
-		nikesh = new User("Nikesh", new Post())
-		leo = new User("Leo", new Post())
-		spike.posts("This is spike's first message")
+		spike = new User("Spike")
+		nikesh = new User("Nikesh")
+		leo = new User("Leo")
+		spike.publishPost("This is spike's first message")
 		leo.follow(nikesh)
 		leo.follow(spike)
 	}

@@ -6,13 +6,12 @@ class User {
 	def following = []
 	def timeLine = []
 
-	User(username, post) {
+	User(username) {
 		this.username = username
-		this.post = post
 	}
 
-	def posts(message) {
-		timeLine.push(this.post.postMessage(message))
+	def publishPost(message) {
+		timeLine.push(new Post(message))
 	}
 
 	def follow(user) {
@@ -20,18 +19,18 @@ class User {
 	}
 
 	def read() {
-		if (following.size < 1) {
+		if (following.size == 0) {
 			return "Your are not following any user"
 		}
-		def answer = [:]
+		def usersTimeLines = [:]
 		def userWithPosts = findUsersWithPosts()
 		for (def i = 0; i < userWithPosts.size; i++) {
-			answer["${userWithPosts[i].username}"] = userWithPosts[i].timeLine
+			usersTimeLines["${userWithPosts[i].username}"] = userWithPosts[i].timeLine
 		}
-		return answer
+		return usersTimeLines
 	}
 
-	def findUsersWithPosts() {
+	private findUsersWithPosts() {
 		following.findAll { user -> user.timeLine.size > 0}
 	}
 }
