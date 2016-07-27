@@ -1,8 +1,5 @@
-// import Post
-
 class User {
 	String username
-	def post
 	def following = []
 	def timeLine = []
 

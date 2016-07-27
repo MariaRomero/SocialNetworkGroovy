@@ -12,7 +12,6 @@ Features:
 Instructions for downloading and running tests:
 - Fork this repo and in the shell do:
 - `groovy UserTests`
-- `groovy featureTests`
 
 To manualy test do:
 - `groovysh`
