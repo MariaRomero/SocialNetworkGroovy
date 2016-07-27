@@ -9,18 +9,18 @@ Features:
 - Reading: Spike can view Nikesh’s timeline
 - Following: Leo can subscribe to Spike and Nikesh's timelines, and view an aggregated list of all subscriptions
 
-Instructions for downloadin and running tests:
+Instructions for downloading and running tests:
 - Fork this repo and in the shell do:
 - `groovy UserTests`
 - `groovy featureTests`
 
 To manualy test do:
 - `groovysh`
-- `spike = new User("Spike", new Post())`
-- `leo = new User("leo", new Post())`
-- `nikesh = new User("nikesh", new Post())`
-- `spike.posts("Spike first message")`
-- `nikesh.posts("Nikesh first message")`
+- `spike = new User("Spike")`
+- `leo = new User("leo")`
+- `nikesh = new User("nikesh")`
+- `spike.publishPost("Spike first message")`
+- `nikesh.publishPost("Nikesh first message")`
 - `spike.follow(nikesh)`
 - `spike.read()`
 - `leo.follow(spike)`

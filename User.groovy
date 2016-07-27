@@ -1,4 +1,4 @@
-import Post
+// import Post
 
 class User {
 	String username
