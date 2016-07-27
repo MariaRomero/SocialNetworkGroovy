@@ -14,6 +14,7 @@ Instructions for downloading and running tests:
 - `groovy UserTests`
 
 To manualy test do:
+
 - `groovysh`
 - `spike = new User("Spike")`
 - `leo = new User("leo")`
