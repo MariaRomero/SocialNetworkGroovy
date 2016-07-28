@@ -14,8 +14,10 @@ Approach:
 This is a different approach to the problem, in this case I completely separated concerns and used SOLID principles, this solution in my opinion keeps the code reusable for longer as classes and their methods can be updated without affecting other classes and their functionally
 
 Instructions for downloading and running tests:
-- Fork this repo and in the shell do:
-- `groovy UserTests`
+  Fork this repo and in the shell do:
+- `groovy TimelineTests`
+- `groovy SubscriptionTests`
+- `groovy SocialNetworkTests`
 
 To manualy test do:
 - `groovysh`
