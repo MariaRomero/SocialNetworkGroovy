@@ -9,20 +9,29 @@ Features:
 - Reading: Spike can view Nikesh’s timeline
 - Following: Leo can subscribe to Spike and Nikesh's timelines, and view an aggregated list of all subscriptions
 
+Approach:
+
+This is a different approach to the problem, in this case I completely separated concerns and used SOLID principles, this solution in my opinion keeps the code reusable for longer as classes and their methods can be updated without affecting other classes and their functionally
+
 Instructions for downloading and running tests:
 - Fork this repo and in the shell do:
 - `groovy UserTests`
-- `groovy featureTests`
 
 To manualy test do:
 - `groovysh`
-- `spike = new User("Spike")`
-- `leo = new User("leo")`
-- `nikesh = new User("nikesh")`
-- `spike.publishPost("Spike first message")`
-- `nikesh.publishPost("Nikesh first message")`
-- `spike.follow(nikesh)`
-- `spike.read()`
-- `leo.follow(spike)`
-- `leo.follow(nikesh)`
-- `leo.read()`
+- `sn = new SocialNetwork()`
+- `sn.addUser(new User("Spike", new Timeline(), new Subscription()))`
+- `sn.addUser(new User("Leo", new Timeline(), new Subscription()))`
+- `sn.addUser(new User("Nikesh", new Timeline(), new Subscription()))`
+- `spike = sn.findUser("Spike")`
+- `leo = sn.findUser("Leo")`
+- `nikesh = sn.findUser("Nikesh")`
+- `spike.timeline.addToTimeline(new Post("Spike first message"))`
+- `spike.timeline.addToTimeline(new Post("Spike second message"))`
+- `nikesh.timeline.addToTimeline(new Post("Nikesh first message"))`
+- `nikesh.timeline.addToTimeline(new Post("Nikesh second message"))`
+- `spike.subscription.follow(nikesh)`
+- `spike.subscription.read()`
+- `leo.subscription.follow(nikesh)`
+- `leo.subscription.follow(spike)`
+- `leo.subscription.read()`

@@ -1,5 +1,4 @@
 class Post {
-
 	def message
 	def date
 
