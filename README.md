@@ -37,3 +37,7 @@ To manualy test do:
 - `leo.subscription.follow(nikesh)`
 - `leo.subscription.follow(spike)`
 - `leo.subscription.read()`
+
+Next steps
+- Work more on tests and the mocking as at the moment not everything is being tested
+- Include all the test on one file that way they can be run with one single command 
